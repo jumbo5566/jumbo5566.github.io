@@ -14,16 +14,22 @@ tags: [例子]
 
 ## 1. github仓库创建
 &emsp;&emsp;主题来源：[jekyllthemes](http://jekyllthemes.org/)
+
 &emsp;&emsp;选择合适主题后，通过`Homepage`跳转至Github对应仓库（注：`Demo`可预览成品效果），Github仓库中点击`Fork`克隆到自己的仓库，`Repository name`处填写`自己的github用户名`+`.github.io`即可，随后点击Create fork完成创建。
 
 ## 2. 仓库设置
 &emsp;&emsp;在自己的该项目页面点击`Setting`进入设置界面，左侧栏目中选择`Pages`页面  ，然后在`Build and deployment`栏目下的`Source`选项选择`Github Actions`,弹出框点击`Configure`完成配置。之后点击页面右上角处`Commit changes...`将自动生成的YML文件提交。
+
 &emsp;&emsp;上方`actions`页面可以查看构建进度，完成后即可通过创建时填写的`自己的github用户名`+`.github.io`域名进行访问。
 ## 3. 博客网页设置
 &emsp;&emsp;根目录下`_config.yml`文件可进行更改，27-29行处可更改为自己的标题、邮箱和作者。
+
 &emsp;&emsp;`_posts`文件夹下为博客文件，由markdown编写。
+
 &emsp;&emsp;`_layout`文件夹下为网站页面，可以自由修改美化。
 ## 4. 注意事项
 &emsp;&emsp;**主题均为英文主题**，国人使用需注意，若想省去汉化麻烦可克隆博主仓库。
+
 &emsp;&emsp;新手上路在编辑文件后不要心急，重新构建需要时间（我还真不知道会重新构建，刷新网页都没变化，一度怀疑有问题），进度可在`Actions`页面下查看。
+
 &emsp;&emsp;**自己汉化重点部分**：网页主页的标题以及副标题部分不完全在`_layouts`文件夹下`home.html`中更改，主要部分在`_data`文件夹下的`defaults.yml`文件（一个大坑，改完网页都没变化，找了好久才找到），其余部分干扰项较小，容易修改。
