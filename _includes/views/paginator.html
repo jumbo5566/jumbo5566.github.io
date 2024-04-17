@@ -1,25 +1,25 @@
 {% if include.paginator %}
-  {% assign paginator = include.paginator %}
+{% assign paginator = include.paginator %}
 {% endif %}
 
 {% if paginator.posts.size > 0 %}
-  <div class="paginator">
-    <span class="previous">
+<div class="paginator">
+  <span class="previous">
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | relative_url }}">Prev</a>
+    <a href="{{ paginator.previous_page_path | relative_url }}">Prev</a>
     {% else %}
-      <span>Prev</span>
+    <span>Prev</span>
     {% endif %}
-    </span>
+  </span>
 
-    <span class="indicator"> {{ paginator.page }}/{{ paginator.total_pages }}</span>
+  <span class="indicator"> {{ paginator.page }}/{{ paginator.total_pages }}</span>
 
-    <span class="next">
+  <span class="next">
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | relative_url }}">Next</a>
+    <a href="{{ paginator.next_page_path | relative_url }}">Next</a>
     {% else %}
-      <span>Next</span>
+    <span>Next</span>
     {% endif %}
-    </span>
-  </div>
+  </span>
+</div>
 {% endif %}
