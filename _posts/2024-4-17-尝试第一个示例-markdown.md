@@ -1,12 +1,11 @@
 ---
 layout: post
-title: 尝试第一个示例
-subtitle: 希望效果不错
-categories: markdown
-tags: [example]
+title: 我的博客创建经历
+subtitle: 还挺不错
+categories: 例子
+tags: [例子]
 ---
 
-# 我的博客创建经历
 ## 大致经历
  1. github仓库创建
  2. 仓库设置
@@ -23,7 +22,7 @@ tags: [example]
 ## 3. 博客网页设置
 &emsp;&emsp;根目录下`_config.yml`文件可进行更改，27-29行处可更改为自己的标题、邮箱和作者。
 &emsp;&emsp;`_posts`文件夹下为博客文件，由markdown编写。
-&emsp;&emsp;`_layout`文件夹下为网站页面，可以修改美化。
+&emsp;&emsp;`_layout`文件夹下为网站页面，可以自由修改美化。
 ## 4. 注意事项
 &emsp;&emsp;**主题均为英文主题**，国人使用需注意，若想省去汉化麻烦可克隆博主仓库。
 &emsp;&emsp;新手上路在编辑文件后不要心急，重新构建需要时间（我还真不知道会重新构建，刷新网页都没变化，一度怀疑有问题），进度可在`Actions`页面下查看。
