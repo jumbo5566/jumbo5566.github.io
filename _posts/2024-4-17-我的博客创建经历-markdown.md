@@ -2,8 +2,8 @@
 layout: post
 title: 我的博客创建经历
 subtitle: 还挺不错
-categories: 例子
-tags: [例子]
+categories: 教程
+tags: [教程]
 ---
 
 ## 大致经历
