@@ -2,9 +2,11 @@
 layout: post
 title: 我的博客创建经历
 subtitle: 还挺不错
+excerpt_image: https://github.com/jeffreytse/jekyll-theme-yat/assets/9413601/2ed22d49-90b1-4f7e-8e8f-b77b21dee505
 categories: 教程
 tags: [教程]
 ---
+![banner](https://github.com/jeffreytse/jekyll-theme-yat/assets/9413601/2ed22d49-90b1-4f7e-8e8f-b77b21dee505)
 
 ## 大致经历
  1. github仓库创建
