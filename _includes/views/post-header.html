@@ -4,7 +4,7 @@
 
   <div class="post-meta">
     <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-      {%- assign date_format = site.yat.date_format | default: "%c %-d, %Y" -%}
+      {%- assign date_format = site.yat.date_format | default: "%c- %-d, %Y" -%}
       <i class="fa fa-calendar"></i> {{ page.date | date: date_format }}
     </time>
 
