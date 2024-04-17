@@ -1,4 +1,4 @@
-{%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
+{%- assign date_format = site.yat.date_format | default: "%c- %-d, %Y" -%}
 
 {%- assign article = post.content -%}
 {%- assign lang = post.lang -%}
@@ -22,10 +22,10 @@
 {%- assign default_image = return -%}
 
 {%- assign post_image = post.excerpt_image
-  | default: post.banner.image
-  | default: post.banner
-  | default: default_image
-  | default: '/assets/images/default-image.jpeg' -%}
+| default: post.banner.image
+| default: post.banner
+| default: default_image
+| default: '/assets/images/default-image.jpeg' -%}
 
 <li class="post-item {{ post_item_class }}">
   <h2 class="post-title">
@@ -43,7 +43,7 @@
   </div>
   <div class="post-excerpt">
     {%- if post_image and post_image != 'NO_EXCERPT_IMAGE' -%}
-    <a  class="post-image" href="{{ post_url }}" style="flex: 0 1 {{ image_width }}">
+    <a class="post-image" href="{{ post_url }}" style="flex: 0 1 {{ image_width }}">
       <div style="background-image: url({{ post_image | relative_url }}); height: {{ image_height }}"></div>
     </a>
     {%- endif -%}
