@@ -15,6 +15,8 @@ tags: [例子]
 ## 1. github仓库创建
 &emsp;&emsp;主题来源：[jekyllthemes](http://jekyllthemes.org/)
 
+&emsp;&emsp;我这里使用的是`Yet Another Theme(YAT)`
+
 &emsp;&emsp;选择合适主题后，通过`Homepage`跳转至Github对应仓库（注：`Demo`可预览成品效果），Github仓库中点击`Fork`克隆到自己的仓库，`Repository name`处填写`自己的github用户名`+`.github.io`即可，随后点击Create fork完成创建。
 
 ## 2. 仓库设置
