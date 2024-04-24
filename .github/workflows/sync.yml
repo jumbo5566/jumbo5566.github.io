@@ -16,9 +16,9 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
         with:
           # 注意替换为你的 GitHub 源仓库地址
-          source-repo: git@github.com:doocs/leetcode.git
+          source-repo: git@Hehao666/Hehao666.github.io
           # 注意替换为你的 Gitee 目标仓库地址
-          destination-repo: git@gitee.com:Doocs/leetcode.git
+          destination-repo: haha233jpg / haha233jpg
 
       - name: Build Gitee Pages
         uses: yanglbme/gitee-pages-action@main
