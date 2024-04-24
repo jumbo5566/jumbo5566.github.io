@@ -57,20 +57,19 @@ jobs:
 
 &emsp;&emsp;**密钥部分**：这一部分大佬没有介绍，但网上可以找到包含这一部分的教程，不过因为gitee版本问题，不完全一样，现版本`Secrets`变成了`Secrets and variables`，同时内容新增了一个`Environment secrets`，具有一定误导性，跟着我的教程操作即可。
 
-&emsp;&emsp;**重要问题**：由于同步使用的是自带功能，与Page的同步方式不一致，如果先触发Page的同步，之后再触发仓库的同步会导致网页不会及时更新，最好的方法是仓库同步也通过这种方法解决，这里我取了个巧，虽然不能彻底解决这个问题，但是降低了出现的概率。**方法**：我没有启用`sync.yml`文件，直接将这一部分代码放至同路径下的`jekyll.yml`最后面，只有前置操作完成才会触发Page的更新。后续如果有更好的方法会及时更新。
+&emsp;&emsp;**重要问题**：由于同步使用的是自带功能，与Page的同步方式不一致，如果先触发Page的同步，之后再触发仓库的同步会导致网页不会及时更新，一个方法是仓库同步也通过这种方法解决。这里我取了个巧，将触发方式修改为了`Push`，这样就不依赖github端刷新，而是gitee端push后刷新网页
 ~~~
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+name: Sync
 
+on:
+  push:
+    branches: ["master"]
+    workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
       - name: Build Gitee Pages
         uses: yanglbme/gitee-pages-action@main
         with:
