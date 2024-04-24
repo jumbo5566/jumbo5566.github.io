@@ -5,7 +5,7 @@ subtitle: 非常有用
 author: haha233jpg
 categories: 教程
 excerpt_image: "/assets/images/normol.gif"
-tags: [教程]
+tags: [教程, 博客]
 top: 2
 ---
 
