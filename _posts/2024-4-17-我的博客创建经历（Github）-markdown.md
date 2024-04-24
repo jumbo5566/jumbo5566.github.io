@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 我的博客创建经历
+title: 我的博客创建经历（github）
 subtitle: 还挺不错
 author: haha233jpg
 categories: 教程
