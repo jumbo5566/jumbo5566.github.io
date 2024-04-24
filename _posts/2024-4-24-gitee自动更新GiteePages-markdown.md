@@ -60,12 +60,10 @@ jobs:
 &emsp;&emsp;**重要问题**：由于同步使用的是自带功能，与Page的同步方式不一致，如果先触发Page的同步，之后再触发仓库的同步会导致网页不会及时更新，一个方法是仓库同步也通过这种方法解决。这里我取了个巧，将触发方式修改为了`Push`，这样就不依赖github端刷新，而是gitee端push后刷新网页
 ~~~
 name: Sync
-
 on:
   push:
     branches: ["master"]
     workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-latest
