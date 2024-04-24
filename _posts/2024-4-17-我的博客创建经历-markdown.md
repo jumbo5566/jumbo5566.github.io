@@ -9,7 +9,7 @@ banner:
   loop: true
   volume: 0.8
   start_at: 8.5
-  image: .\assets\images\海豚.jpeg
+  image: https:\haha233jpg.gitee.io\assets\images\海豚.jpeg
   opacity: 0.618
   background: "#000"
   height: "100vh"
