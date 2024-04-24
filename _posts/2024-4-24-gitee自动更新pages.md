@@ -4,7 +4,7 @@ title: gitee自动更新pages
 subtitle: 非常有用
 author: haha233jpg
 categories: 教程
-excerpt_image: "/assets/images/gitee.jpg"
+excerpt_image: "/assets/images/2024-4-24/gitee.jpg"
 tags: [教程, 博客]
 top: 2
 ---

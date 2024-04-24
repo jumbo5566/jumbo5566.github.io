@@ -4,7 +4,7 @@ title: 国内访问博客（gitee同步github）
 subtitle: 非常有用
 author: haha233jpg
 categories: 教程
-excerpt_image: "/assets/images/github.jpeg"
+excerpt_image: "/assets/images/2024-4-24/github.jpeg"
 tags: [教程, 博客]
 top: 2
 ---
