@@ -5,11 +5,11 @@ subtitle: A awesome static site generator.
 author: Jeffrey
 categories: jekyll
 banner:
-  video: \assets\videos\oceans.mp4
+  video: \_posts\assets\videos\oceans.mp4
   loop: true
   volume: 0.8
   start_at: 8.5
-  image: \assets\images\海豚.jpeg
+  image: \_posts\assets\images\海豚.jpeg
   opacity: 0.618
   background: "#000"
   height: "100vh"

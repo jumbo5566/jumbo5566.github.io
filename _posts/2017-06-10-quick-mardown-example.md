@@ -2,13 +2,13 @@
 layout: post
 title: Quick markdown example
 subtitle: This is a quick markdown example
-excerpt_image: \assets\images\normol.gif
+excerpt_image: \_posts\assets\images\normol.gif
 categories: markdown
 tags: [example]
 top: 2
 ---
 
-![banner](\assets\images\normol.gif)
+![banner](\_posts\assets\images\normol.gif)
 
 Paragraphs are separated by a blank line.
 
