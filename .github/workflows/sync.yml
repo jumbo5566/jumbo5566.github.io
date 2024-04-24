@@ -1,8 +1,11 @@
 name: Sync
 
 on:
-  push:
-    branches: ["master"]
+  pull_request:
+    types:
+      - opened
+  #push:
+    #branches: ["master"]
     workflow_dispatch:
 
 delay: 60
