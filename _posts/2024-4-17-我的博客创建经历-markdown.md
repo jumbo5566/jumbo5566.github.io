@@ -9,7 +9,7 @@ banner:
   loop: true
   volume: 0.8
   start_at: 8.5
-  image: https://gitee.com/haha233jpg/haha233jpg/blob/master/assets/images/%E6%B5%B7%E8%B1%9A.jpeg
+  image: https://gitee.com/haha233jpg/haha233jpg/raw/master/assets/images/海豚.jpeg
   opacity: 0.618
   background: "#000"
   height: "100vh"
