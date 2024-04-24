@@ -1,7 +1,7 @@
 ---
 layout: post
-title: An exhibit of Markdown
-subtitle: Each post also has a subtitle
+title: Markdown的展示
+subtitle: 每篇帖子都有一个副标题
 categories: markdown
 tags: [example, markdown]
 ---
