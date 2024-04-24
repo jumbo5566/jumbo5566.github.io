@@ -7,7 +7,6 @@ categories: 教程
 excerpt_image: "/assets/images/normol.gif"
 tags: [教程]
 top: 2
-sidebar: []
 ---
 
 ## 教程经历
