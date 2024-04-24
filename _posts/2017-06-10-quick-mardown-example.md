@@ -2,13 +2,13 @@
 layout: post
 title: Quick markdown example
 subtitle: This is a quick markdown example
-excerpt_image: https://github.com/jeffreytse/jekyll-theme-yat/assets/9413601/2ed22d49-90b1-4f7e-8e8f-b77b21dee505
+excerpt_image: \assets\images\normol.gif
 categories: markdown
 tags: [example]
 top: 2
 ---
 
-![banner](https://github.com/jeffreytse/jekyll-theme-yat/assets/9413601/2ed22d49-90b1-4f7e-8e8f-b77b21dee505)
+![banner](\assets\images\normol.gif)
 
 Paragraphs are separated by a blank line.
 
