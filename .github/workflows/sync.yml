@@ -9,18 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Mirror the Github organization repos to Gitee.
-        uses: Yikun/hub-mirror-action@master
-        with:
-          src: 'github/Datalong'
-          dst: 'gitee/Datalong'
-          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
-          dst_token:  ${{ secrets.GITEE_TOKEN }}
-          static_list: "blog"
-          force_update: true
-          debug: true
-
-
       - name: Build Gitee Pages
         uses: yanglbme/gitee-pages-action@main
         with:
@@ -32,3 +20,15 @@ jobs:
           gitee-repo: haha233jpg/haha233jpg
           # 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）
           branch: main
+
+      - name: Mirror the Github organization repos to Gitee.
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: 'github/Datalong'
+          dst: 'gitee/Datalong'
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token:  ${{ secrets.GITEE_TOKEN }}
+          static_list: "blog"
+          force_update: true
+          debug: true
+
