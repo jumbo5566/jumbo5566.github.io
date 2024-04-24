@@ -22,12 +22,10 @@ top: 2
 &emsp;&emsp;如果是跟着我前两篇教程走到现在的朋友，可以精简掉大部分代码，仅保留这一部分，删除的一部分是自动同步github的代码到gitee，这部分功能已经完成，无需再进行配置。
 ~~~
 name: Sync
-
 on:
   push:
     branches: ["master"]
     workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-latest
