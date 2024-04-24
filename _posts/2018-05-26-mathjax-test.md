@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Mathjax Test
-subtitle: My first mathjax expression
+title: 数字测试
+subtitle: 我第一个数字测试经验
 categories: markdown
 tags: [test]
 ---
