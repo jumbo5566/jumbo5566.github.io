@@ -124,15 +124,15 @@ $ sudo nginx -s reload
 ```
 
 |:                        |:                  :|: $$O_3 + C_2H_2 \rightarrow $$         :|||:  $$O_3 + C_2H_4 \rightarrow $$ :|||:       :| 
-|:  ^^ Method            :| ^^ $$\lambda^a$$  |    vdW |    TS |    cycloadd.           |  vdW  |  TS  |  cycloadd.           | ^^ MAE    |
-|-------------------------|-------------------|--------|-------|------------------------|-------|------|----------------------|-----------|
-| $$\lambda$$-tPBE        |   0.20            | -0.40  | 7.69  | -68.00                 | -1.86 | 4.87 | -57.57               | 1.29      |
-|-------------------------|-------------------|--------|-------|------------------------|-------|------|----------------------|-----------|
-| MC1H-PBE $$^b$$         |   0.25            | -1.08  | 3.66  | -70.97                 | -1.25 | 0.13 | -61.26               | 3.35      |
-|-------------------------|-------------------|--------|-------|------------------------|-------|------|----------------------|-----------|
-| Reference values $$^c$$ |   ---------       | -1.90  | 7.74  | -63.80                 | -1.94 | 3.37 | -57.15               | --------- |
-|=========================|===================|========|=======|========================|=======|======|======================|===========|
-| $$^a$$ The optimal mixing parameter.$$\~$$ $$^b$$ From Ref. .$$\~$$  $$^c$$ Best estimates from Ref. . ||||||||
+| :  ^^ Method            :                                                                              | ^^ $$\lambda^a$$    | vdW      | TS      | cycloadd.                | vdW     | TS     | cycloadd.              | ^^ MAE      |
+| ------------------------------------------------------------------------------------------------------ | ------------------- | -------- | ------- | ------------------------ | ------- | ------ | ---------------------- | ----------- |
+| $$\lambda$$-tPBE                                                                                       | 0.20                | -0.40    | 7.69    | -68.00                   | -1.86   | 4.87   | -57.57                 | 1.29        |
+| -------------------------                                                                              | ------------------- | -------- | ------- | ------------------------ | ------- | ------ | ---------------------- | ----------- |
+| MC1H-PBE $$^b$$                                                                                        | 0.25                | -1.08    | 3.66    | -70.97                   | -1.25   | 0.13   | -61.26                 | 3.35        |
+| -------------------------                                                                              | ------------------- | -------- | ------- | ------------------------ | ------- | ------ | ---------------------- | ----------- |
+| Reference values $$^c$$                                                                                | ---------           | -1.90    | 7.74    | -63.80                   | -1.94   | 3.37   | -57.15                 | ---------   |
+| =========================                                                                              | =================== | ======== | ======= | ======================== | ======= | ====== | ====================== | =========== |
+| $$^a$$ The optimal mixing parameter.$$\~$$ $$^b$$ From Ref. .$$\~$$  $$^c$$ Best estimates from Ref. . |                     |          |         |                          |         |        |                        |
 
 
 |   1   |  2     |   3   |   4   |  5   |  6   |  7  |
@@ -168,41 +168,41 @@ $ sudo nginx -s reload
 
 ## Table
 
-| Stage | Direct Products | ATP Yields |
-| ----: | --------------: | ---------: |
-|Glycolysis | 2 ATP                   ||
-|^^         | 2 NADH      | 3--5 ATP   |
-|Pyruvaye oxidation | 2 NADH | 5 ATP   |
-|Citric acid cycle  | 2 ATP           ||
-|^^                 | 6 NADH | 15 ATP  |
-|^^                 | 2 FADH | 3 ATP   |
-|                        30--32 ATP  |||
+|              Stage | Direct Products | ATP Yields |
+| -----------------: | --------------: | ---------: |
+|         Glycolysis |           2 ATP |            |
+|                 ^^ |          2 NADH |   3--5 ATP |
+| Pyruvaye oxidation |          2 NADH |      5 ATP |
+|  Citric acid cycle |           2 ATP |            |
+|                 ^^ |          6 NADH |     15 ATP |
+|                 ^^ |          2 FADH |      3 ATP |
+|         30--32 ATP |                 |            |
 
 
 {:color-style: style="background: black;" }
 {:color-style: style="color: white;" }
 {:font-style: style="font-weight: 900; text-decoration: underline;" }
 
-|:             Here's a Inline Attribute Lists example                 :||||
-| ------- | ------------------------- | -------------------- | ----------- |
-|:       :|:  <div style="color: red;"> &lt; Normal HTML Block > </div> :|||
-| ^^      |   Red    {: .cls style="background: orange" }                |||
-| ^^ IALs |   Green  {: #id style="background: green; color: white" }    |||
-| ^^      |   Blue   {: style="background: blue; color: white" }         |||
-| ^^      |   Black  {: color-style font-style}                          |||
+| :             Here's a Inline Attribute Lists example                 : |                                                                |     |     |
+| ----------------------------------------------------------------------- | -------------------------------------------------------------- | --- | --- |
+| :       :                                                               | :  <div style="color: red;"> &lt; Normal HTML Block > </div> : |     |     |
+| ^^                                                                      | Red    {: .cls style="background: orange" }                    |     |     |
+| ^^ IALs                                                                 | Green  {: #id style="background: green; color: white" }        |     |     |
+| ^^                                                                      | Blue   {: style="background: blue; color: white" }             |     |     |
+| ^^                                                                      | Black  {: color-style font-style}                              |     |     |
 
 
 [cell image]: https://jekyllrb.com/img/octojekyll.png "An exemplary image"
 
-| Heading            | Column 1      | Column 2                           |
-|--------------------|---------------|------------------------------------|
-| Row 1              | Apple[^1]     | [Youtube (Home)]                   |
-| Row 2              | Banana        | [Github][1]                        |
-| Row 3 (merged)     | Blueberry     | [Google] *****  [Github]           |
-| ^^         | [Plum](https://example.com) | Raspberry ![example][cell image]   |
-| Row 4      | <https://www.google.com>    |  [test](https://www.google.com){:target="_blank"}                            |
-|^^          |^^ <https://www.youtube.com> |                              |
-| Row 5      | <https://www.google.com>                                  ||
+| Heading        | Column 1                     | Column 2                                         |
+| -------------- | ---------------------------- | ------------------------------------------------ |
+| Row 1          | Apple[^1]                    | [Youtube (Home)]                                 |
+| Row 2          | Banana                       | [Github][1]                                      |
+| Row 3 (merged) | Blueberry                    | [Google] *****  [Github]                         |
+| ^^             | [Plum](https://example.com)  | Raspberry ![example][cell image]                 |
+| Row 4          | <https://www.google.com>     | [test](https://www.google.com){:target="_blank"} |
+| ^^             | ^^ <https://www.youtube.com> |                                                  |
+| Row 5          | <https://www.google.com>     |                                                  |
 
 [Youtube (Home)]: https://www.youtube.com
 [Google]: https://www.google.com
@@ -216,9 +216,9 @@ Not in table: `<Mail Gateway>`
 
 In table:
 
-Decision Point | Design Decision
---- | ---
-Authoritative DNS MX Record | `<Mail Gateway>`
+| Decision Point              | Design Decision  |
+| --------------------------- | ---------------- |
+| Authoritative DNS MX Record | `<Mail Gateway>` |
 
 9 \* 9
 
