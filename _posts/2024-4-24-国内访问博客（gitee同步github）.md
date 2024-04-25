@@ -50,3 +50,7 @@ top: 2
 ![令牌 图片](/assets/images/2024-4-24/令牌.png)
 &emsp;&emsp;**文档编辑部分**：我们使用gitee同步仓库是为了国内直接访问，但是这个主题使用的图片和视频一部分来源是网络，国内无法访问，所以我们需要将对应资源下载下来放到仓库，这里推荐将图片和视频放到`/assets/images`和`/assets/videos`文件夹下。同时需要注意，在编辑markdown文件时，这部分地址需要使用`" "`包起来，不然主页的博客不会显示对应帖子的预览图。
 ![预览 图片](/assets/images/2024-4-24/预览图.png)
+&emsp;&emsp;**代码部分**：这个主题存在不贴切国内的地方，以上操作完后会发现在访问网页时，内容明明加载完了，但浏览器进度条依然在加载，这是因为主题内挂载了谷歌翻译，国内无法访问，这里直接屏蔽掉`_includes/extensions/goole-translate.html`最后一行。
+~~~html
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+~~~
