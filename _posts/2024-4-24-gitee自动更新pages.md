@@ -9,11 +9,6 @@ tags: [教程, 博客]
 top: 2
 ---
 
-## 教程经历
- 1. 方法介绍及代码修改
- 2. 仓库设置
- 3. 注意事项
-
 ## 1. gitee仓库创建
 &emsp;&emsp;使用大佬仓库[ylb/gitee-pages-action](https://gitee.com/yanglbme/gitee-pages-action)完成自动更新Gitee Pages，网上教程大部分时间跨度太长，不适用于现在的环境，故此篇教程从0开始辅导小白完成该项目。
 

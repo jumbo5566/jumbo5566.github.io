@@ -9,13 +9,6 @@ tags: [教程, 博客]
 top: 2
 ---
 
-## 教程经历
- 1. gitee仓库创建
- 2. gitee page使用
- 3. 自动同步github仓库
- 4. 获取Github仓库地址
- 5. 注意事项
-
 ## 1. gitee仓库创建
 &emsp;&emsp;主页右上角`+`选择`新建仓库`
 ![新建 图片](/assets/images/2024-4-24/新建.png)
