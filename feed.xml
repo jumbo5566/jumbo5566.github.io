@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="/jekyll-theme-yat/feed.xml" rel="self" type="application/atom+xml" /><link href="/jekyll-theme-yat/" rel="alternate" type="text/html" /><updated>2024-10-12T10:16:03+00:00</updated><id>/jekyll-theme-yat/feed.xml</id><title type="html">BG7IYN’s BLOG</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>BG7IYN</name></author><entry><title type="html">Radioberry PAv2 Test</title><link href="/jekyll-theme-yat/pro/rb/2024/04/17/rb016_025.html" rel="alternate" type="text/html" title="Radioberry PAv2 Test" /><published>2024-04-17T00:00:00+00:00</published><updated>2024-04-17T00:00:00+00:00</updated><id>/jekyll-theme-yat/pro/rb/2024/04/17/rb016_025</id><content type="html" xml:base="/jekyll-theme-yat/pro/rb/2024/04/17/rb016_025.html"><![CDATA[<h2 id="how-to-work">HOW to Work</h2>
+<h1 id="1-enable-pa-on-sparksdr">1. ENABLE PA on SparkSDR</h1>
+<div align="center">
+<img src="/assets/images/ENABLE_PA.png" width="600" />
+</div>
+<p>#2. Radio Setting</p>
+<div align="center">
+<img src="/assets/images/ENABLE_PA1.png" width="600" />
+</div>
+<h1 id="3-test-data">3. Test Data</h1>
+<div align="center">
+<img src="/assets/images/RB_PA.png" width="600" />
+</div>
+<h1 id="5-faq">5. FAQ</h1>
+<h1 id="if-the-pa-dont-workpls-check-the-1-2-and-the-d-tx-led-is-red-">if the PA don’t work,pls check the 1. 2. and The D. TX LED is RED ?</h1>
+<p>C.Check input Vpp &gt;=7V</p>
+<div align="center">
+<img src="/assets/images/A.png" />
+</div>
+<p>#Check Pa Curr &gt;=2V ,it is the output of INA199A1DCKR with 40mR RES Current to Vol ,2V=1A</p>
+<div align="center">
+<img src="/assets/images/B.png" />
+</div>
+<p>#if  C. and D. the MOS is fail</p>
+
+<div align="center">
+<img src="/assets/images/PA.png" />
+</div>]]></content><author><name>jumbo5566</name></author><category term="pro" /><category term="rb" /><category term="radioberry" /><category term="14" /><summary type="html"><![CDATA[HOW to Work 1. ENABLE PA on SparkSDR #2. Radio Setting 3. Test Data 5. FAQ if the PA don’t work,pls check the 1. 2. and The D. TX LED is RED ? C.Check input Vpp &gt;=7V #Check Pa Curr &gt;=2V ,it is the output of INA199A1DCKR with 40mR RES Current to Vol ,2V=1A #if C. and D. the MOS is fail]]></summary></entry></feed>
