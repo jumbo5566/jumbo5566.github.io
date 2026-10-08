@@ -1,0 +1,66 @@
+---
+layout: about
+title: ADS-B Receiver
+---
+
+<h2>ADS-B Aircraft Receiver</h2>
+
+<p class="lead">Power it up, attach an antenna, and your computer sees the aircraft around you in real time — callsign, position, altitude, speed and heading, all from signals the aircraft broadcasts itself. <b>No internet, no subscription, no monthly fee.</b></p>
+
+<p>
+  <img src="/assets/images/adsb/ADSB.png" alt="Live aircraft map captured with the ADS-B receiver" style="width:100%;max-width:560px;display:block;border:1px solid rgba(0,0,0,.15);border-radius:8px">
+  <em style="opacity:.7;font-size:.9em">Real capture: aircraft shown live in the software — callsign, position, altitude and heading at a glance</em>
+</p>
+
+<h3>What it is</h3>
+<p>A palm-sized ADS-B receiver board. Airliners continuously broadcast their identity and position. This board receives and decodes those public signals and delivers the live information of every aircraft it hears over a standard serial port to your laptop, Raspberry Pi, microcontroller or drone ground station. It is a <b>receive-only</b> device: it listens, it never transmits, it interferes with nothing.</p>
+
+<h3>What you will see</h3>
+<ul>
+  <li><b>Callsign / registration</b> — e.g. <code>CES1234</code>, <code>B-652Q</code>, so you know exactly which flight it is</li>
+  <li><b>Latitude &amp; longitude</b> — plotted live on the map</li>
+  <li><b>Pressure altitude</b> — how high it is right now</li>
+  <li><b>Ground speed</b> — how fast it is covering the ground</li>
+  <li><b>Heading</b> — which direction it is flying</li>
+  <li><b>Climb / descent rate</b> — climbing or descending</li>
+  <li><b>Signal strength</b> — tells you if your antenna is well placed</li>
+  <li><b>Multi-aircraft tracking</b> — many aircraft at once, stale targets cleared automatically</li>
+</ul>
+
+<h3>Key features</h3>
+<ul>
+  <li><b>No internet, no subscription</b> — the signal comes from the aircraft itself; works offline, zero running costs</li>
+  <li><b>Two mainstream output formats</b> — one for drone ground stations (Mission Planner and the MAVLink ecosystem), one for open-source flight-map tools; switch with a single command</li>
+  <li><b>Tunable sensitivity</b> — boost it to reach farther, dial it back near an airport to cut noise; takes effect in seconds</li>
+  <li><b>Self-tuning on power-up</b> — adapts to different antennas and RF modules, ready out of the box</li>
+  <li><b>Settings survive power-off</b> — one command returns to factory defaults</li>
+  <li><b>Firmware update over one cable</b> — through the same serial port, saved settings preserved</li>
+  <li><b>Plug and play</b> — four wires to a USB-to-serial adapter; powered at <b>3.3V</b>, draws about <b>10 mA</b></li>
+  <li><b>Open-source friendly</b> — compatible with mainstream flight-tracking tools</li>
+</ul>
+
+<h3>Getting started (4 steps)</h3>
+<ol>
+  <li><b>Wire it up</b> — <code>3.3V → VCC</code>, <code>GND → GND</code>, <code>TX → RX</code>, <code>RX → TX</code>. <b>Use 3.3V — do not connect 5V.</b> On a CH340 breakout the VCC pin is 5V from USB, so take 3.3V from the adapter's regulator pin or a separate supply.</li>
+  <li><b>Fit the antenna</b> — as high and open as you can (window, balcony, roof), away from metal and large glass.</li>
+  <li><b>Open the software</b> — Mission Planner, a flight-map tool, or the browser serial terminal.</li>
+  <li><b>Watch the aircraft</b> — icons appear on the map; click one for callsign, altitude, speed and heading.</li>
+</ol>
+
+<h3>Tools</h3>
+<ul>
+  <li><b>Web serial terminal</b> — <a href="https://github.com/jumbo5566/adsb-module/blob/main/Web-serial-at.html">Web-serial-at.html</a> runs in Chrome / Edge / Opera over <code>http://localhost</code>, with the module's AT commands as one-click buttons. Set 115200 8N1, press CONNECT, send <code>AT</code>, get <code>OK</code>.</li>
+  <li><b>Python viewer</b> — <code>python mavlink_decoder_win.py COM25 115200</code> prints every decoded aircraft and logs them to a <code>jsonl</code> file.</li>
+  <li><b>Repository</b> — <a href="https://github.com/jumbo5566/adsb-module">github.com/jumbo5566/adsb-module</a> (product introduction, web terminal, viewer tool).</li>
+</ul>
+
+<h3>Specifications</h3>
+<ul>
+  <li>Power supply: <b>3.3V only</b> (5V not supported)</li>
+  <li>Working current: approx. <b>10 mA</b></li>
+  <li>Interface: standard serial port, 115200 default, 9600 selectable</li>
+  <li>Receive band: ADS-B aviation broadcast band (1090 MHz), with matching antenna</li>
+  <li>Mode: receive only, no transmission</li>
+</ul>
+
+<p style="opacity:.75;font-size:.92em">This device receives flight information that aircraft broadcast publicly, for learning, research, hobby use and derivative projects. Use it only in ways that comply with your local regulations.</p>
