@@ -1,8 +1,51 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
-title: 主页
-banner: "/assets/images/banners/home.jpeg"
+layout: about
+title: Home
 ---
+
+<h2>Projects</h2>
+
+<p class="lead">Everything below is public. Each entry links to its repository, with a short note on what it is for and where to start.</p>
+
+<h3>ADS-B aircraft receiver</h3>
+<p>A palm-sized receive-only ADS-B board: power it at 3.3V, fit the antenna, and your laptop, Raspberry Pi or drone ground station sees the aircraft around you live — callsign, position, altitude, speed, heading. No internet, no subscription, no running cost.</p>
+<ul>
+  <li>Product page on this site: <a href="/adsb.html">ADS-B Receiver</a></li>
+  <li>Repository: <a href="https://github.com/jumbo5566/adsb-module">jumbo5566/adsb-module</a></li>
+  <li>Browser serial terminal (in the repo): <code>Web-serial-at.html</code> — Chrome / Edge / Opera over <code>http://localhost</code>, AT commands as one-click buttons, 115200 8N1</li>
+  <li>Viewer tool (in the repo): <code>python mavlink_decoder_win.py COM25 115200</code></li>
+</ul>
+
+<h3>DX-888 manuals (TEF6686 receiver)</h3>
+<p>Documentation for the DX-888 radio receiver module built around the NXP TEF6686 tuner IC. Both editions are kept as PDFs inside the repository, so the links never point at an external download page.</p>
+<ul>
+  <li>Repository: <a href="https://github.com/jumbo5566/manuals">jumbo5566/manuals</a></li>
+  <li>English edition: <a href="https://github.com/jumbo5566/manuals/blob/main/DX-888.pdf">DX-888.pdf</a></li>
+  <li>Chinese edition: <a href="https://github.com/jumbo5566/manuals/blob/main/DX-888CN.pdf">DX-888CN.pdf</a></li>
+</ul>
+
+<h3>Flow Station</h3>
+<p>Open-source amateur-radio station software: an ESP32-based audio and control layer that ties a transceiver to Asterisk / AllStar / DMR / YSF / P25 / NXDN style digital voice links, with a web console for configuration and monitoring.</p>
+<ul>
+  <li>Repository: <a href="https://github.com/jumbo5566/flowstation">jumbo5566/flowstation</a> (main branch)</li>
+  <li>Upstream project: <a href="https://github.com/razvanzeces/flowstation">razvanzeces/flowstation</a></li>
+  <li>Start from <code>README.md</code> and the <code>example_config</code> folder in the repository</li>
+</ul>
+
+<h3>Brew server</h3>
+<p>Server side of the Brew hub ecosystem: federation, console, SDS messaging and relay services that the Flow Station firmware talks to.</p>
+<ul>
+  <li>Repository: <a href="https://github.com/jumbo5566/brew-server">jumbo5566/brew-server</a> (main branch)</li>
+  <li>Upstream project: <a href="https://github.com/ysamouhos/brew-server">ysamouhos/brew-server</a></li>
+  <li>Sample configuration lives in the <code>sample/</code> folder of the repository</li>
+</ul>
+
+<h3>Latest articles</h3>
+<ul>
+  {%- for post in site.posts limit:5 -%}
+  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — {{ post.date | date: "%Y-%m-%d" }}</li>
+  {%- endfor -%}
+</ul>
+
+<h3>Getting in touch</h3>
+<p>Questions, orders and firmware requests: <a href="mailto:jumbo888@me.com">jumbo888@me.com</a>. Product introduction for the ADS-B receiver: <a href="/adsb.html">ADS-B Receiver</a>.</p>
