@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /adsb-receiver.html
 title: "ADS-B Aircraft Receiver: see the planes over your house"
 subtitle: "Receive-only ADS-B board, 3.3V, 115200 serial"
 author: jumbo5566
