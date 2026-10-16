@@ -47,6 +47,75 @@ While it runs you get one live line:
 
 Raising the recording to 80 % is what makes this test trustworthy. PTT keys above 5 % volume, so a quiet microphone can sit under the threshold all day and make working hardware look broken. After normalization the same audio always keys the radio, and a failure means a real fault. The waveform above is a real run: 4.98 s, 44.1 kHz, peak exactly **0.800**.
 
+## A real run, from cold start to key-up
+
+This is the whole session, copied out of the console:
+
+```
+C:\Users\Administrator\Desktop\USBaudio>recorder.exe -t
+Usage: recorder.exe [option]
+
+Options:
+  (none)   Auto mode (default): if the CM108 USB sound card is present,
+           run PTT mode (volume > 5% -> PTT on, 3 s min hold; IO4 high
+           for 5 s at startup = the blue COS LED). Otherwise, if a CH340
+           serial adapter is present, run frequency setup mode. If neither
+           is found, show this help.
+  -r       Recorder mode: record from the USB mic until 'q' pressed,
+           then save to a WAV file and show the waveform.
+  -f       Frequency setup mode: find the CH340 serial adapter
+           (USB\VID_1A86&PID_7523), connect to the SA818 module and
+           program frequency / tone / squelch / volume (no range check).
+           Enter 'q' at any prompt to quit without changes.
+  -t       Test mode: record 5 s from the USB mic (normalized), play it
+           back on the USB speaker; PTT follows the playback volume.
+           Exits by itself.
+  -h       Show this help and exit.
+
+Target device: USB\VID_0D8C&PID_0012 (CM108-family USB audio, VID/PID in code).
+
+Note (Windows): when using the 'incoming radio signal triggers on
+volume decrease' feature, please remove the diode on the board.
+
+=== Test Mode: record 10 s, then play back (PTT driven by volume) ===
+
+[USB] Found target device: 麦克风 (3- USB Audio Device) (matched by registry name "USB Audio Device")
+[TEST] Recording 5 s from the USB mic...
+[REC] Recording... press 'q' + Enter to stop
+[REC]   4.9 sec | vol [                         ]   0% | press 'q' to stop
+[OK] Recording stopped after 5 sec (215208 frames)
+     Sample rate: 44100 Hz, Channels: 1, Bit depth: 16-bit
+[NORM] Peak 0.0% -> scaling by 2621.4x to 80%
+[SAVED] Written to: test.wav (4.9 sec)
+[TEST] Recording level: peak 80.0%, RMS 6.4%
+[PTT] Found CM108 HID device: \\?\hid#vid_0d8c&pid_0012&mi_03#7&38dee8e7&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
+[PTT] Monitoring playback of: 扬声器 (3- USB Audio Device)
+[IO4] >>> HIGH at startup = blue COS LED on (auto-low after 5 s)
+
+[[PTT] MoniTEtoSTri] ngPlaying back the reco playback volume (threshold 5%). Press 'q' to quit.
+[  0.0s] RX       vol [                         ]   0%  PTT:OFF  'q' quit follows playback volume)...
+[PLAY] test.wav: 44100 Hz, 1 ch, 215208 samples (4.9 s)
+[PLAY] Render format: 48000 Hz, 2 ch, 32-bit float
+[PLAY] Playing...
+
+[PTT] >>> TX ON  (vol 38.7%, min 3 s hold)
+[  0.2s] TX( 2.9s) vol [########                 ]  32%  PTT:ON   'q' quit
+```
+
+Reading it, line by line, this is what you are actually checking:
+
+- **`[USB] Found target device: 麦克风 (3- USB Audio Device)`** — the microphone side was picked out of the registry on its own, nothing to configure
+- **`[NORM] Peak 0.0% -> scaling by 2621.4x to 80%`** — the room was quiet. The raw capture peaked at next to nothing, and normalization pushed it up to 80 % anyway. This single line is why the test never needs you to talk into the microphone
+- **`[PTT] Found CM108 HID device: \\?\hid#vid_0d8c&pid_0012...`** — the GPIO side found too, by the same rule
+- **`[IO4] >>> HIGH at startup`** — the blue COS LED lights for 5 seconds and drops by itself
+- **`PTT:OFF` at 0.0 s, then `>>> TX ON (vol 38.7%, min 3 s hold)`** — the transmitter keys because the playback volume crossed 5 %, and for no other reason
+- **`TX( 2.9s)`** — the 3 second minimum hold counting down, so a momentary dip in the audio cannot unkey the radio mid-burst
+- **`test.wav: 44100 Hz, 1 ch` into `Render format: 48000 Hz, 2 ch`** — it resamples on the way out, so a 44.1 kHz mono file plays correctly on a 48 kHz stereo endpoint
+
+The two garbled lines in the middle are the PTT monitor and the playback thread writing to the same console at the same time; they only overlap on screen, the behaviour is fine. And the banner line still says `record 10 s` — leftover text from an older build, the capture is 5 seconds, as the `[TEST]` line says.
+
+After the 4.9 seconds of playback run out, the volume drops, PTT releases after the hold, and the program exits on its own.
+
 ## What it is
 
 USBaudio drives a CM108-family USB sound card (`VID_0D8C&PID_0012`) and a CH340 serial adapter (`VID_1A86&PID_7523`). It keys the radio from the playback volume, and programs SA818 / SR-FRS modules over serial.
